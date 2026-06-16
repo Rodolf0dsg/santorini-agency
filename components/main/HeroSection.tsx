@@ -90,7 +90,7 @@ export const HeroSection = () => {
       style={{ clipPath: "contents" }} 
       className="relative h-screen w-full flex items-center justify-center bg-surface-container-lowest z-0 overflow-hidden"
     >
-      {/* CAPA DE VIDEOS FIJOS CON DETECCIÓN DE VISIBILIDAD */}
+      
       <div className={`fixed inset-0 w-full h-full z-0 overflow-hidden pointer-events-none ${!isHeroVisible ? "hidden" : "block"}`}>
         <video
           ref={videoRefA}
@@ -110,20 +110,19 @@ export const HeroSection = () => {
           muted
           playsInline
           style={{ width: "100%", height: "100%", objectFit: "cover" }}
+          poster="/images/hero-section/hero-section-image.png"
           className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
             activePlayer === 'B' ? "opacity-100 z-2" : "opacity-0 z-1"
           }`}
         />
       </div>
 
-      {/* GRADIENTE SUPERIOR OSCURO */}
+      
       <div className="absolute inset-0 bg-linear-to-b from-surface-container-lowest/40 via-surface-container-lowest/60 to-surface-container-lowest z-3"></div>
 
-      {/* CONTENIDO INTERFAZ ORIGINAL COMPLETO */}
       <div className="relative z-10 w-full max-w-7xl px-container-padding-mobile md:px-container-padding-desktop mt-24">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center w-full">
           
-          {/* Tarjeta de textos y acciones */}
           <div className="glass-card w-full p-8 md:p-12 rounded-xl">
             <p className="font-label-md text-label-md uppercase tracking-widest text-secondary mb-4">
               Established Excellence
@@ -151,7 +150,6 @@ export const HeroSection = () => {
             </div>
           </div>
 
-          {/* Contenedor del Logo Animado a la derecha */}
           <div className="hidden md:flex justify-center items-center w-full">
             <img 
               alt="Santorini Ships Logo Grande" 
@@ -163,7 +161,6 @@ export const HeroSection = () => {
         </div>
       </div>
 
-      {/* Indicador inferior de Scroll */}
       <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce text-secondary z-10">
         <span className="material-symbols-outlined text-4xl">keyboard_double_arrow_down</span>
       </div>
