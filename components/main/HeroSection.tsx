@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
 
 const HERO_VIDEOS = [
@@ -12,7 +13,6 @@ const HERO_VIDEOS = [
 export const HeroSection = () => {
   const [currentIdx, setCurrentIdx] = useState(0);
   const [activePlayer, setActivePlayer] = useState<'A' | 'B'>('A');
-  
   const [isHeroVisible, setIsHeroVisible] = useState(true);
   
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -97,7 +97,7 @@ export const HeroSection = () => {
           src={HERO_VIDEOS[0]}
           style={{ width: "100%", height: "100%", objectFit: "cover" }}
           className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
-            activePlayer === 'A' ? "opacity-100 z-2" : "opacity-0 z-1"
+            activePlayer === 'A' ? "opacity-100 z-10" : "opacity-0 z-0"
           }`}
         />
 
@@ -107,17 +107,24 @@ export const HeroSection = () => {
           muted
           playsInline
           style={{ width: "100%", height: "100%", objectFit: "cover" }}
-          poster="/images/hero-section/hero-section-image.png"
           className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
-            activePlayer === 'B' ? "opacity-100 z-2" : "opacity-0 z-1"
+            activePlayer === 'B' ? "opacity-100 z-10" : "opacity-0 z-0"
           }`}
+        />
+        
+        <Image
+          alt="Santorini Maritime Background Placeholder"
+          src="/images/hero-section/hero-section-image.png"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover select-none pointer-events-none z-1"
         />
       </div>
 
-      
-      <div className="absolute inset-0 bg-linear-to-b from-surface-container-lowest/40 via-surface-container-lowest/60 to-surface-container-lowest z-3"></div>
+      <div className="absolute inset-0 bg-linear-to-b from-surface-container-lowest/40 via-surface-container-lowest/60 to-surface-container-lowest z-20"></div>
 
-      <div className="relative z-10 w-full max-w-7xl px-container-padding-mobile md:px-container-padding-desktop mt-24">
+      <div className="relative z-30 w-full max-w-7xl px-container-padding-mobile md:px-container-padding-desktop mt-24">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center w-full">
           
           <div className="glass-card w-full p-8 md:p-12 rounded-xl">
@@ -158,7 +165,7 @@ export const HeroSection = () => {
         </div>
       </div>
 
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce text-secondary z-10">
+      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce text-secondary z-30">
         <span className="material-symbols-outlined text-4xl">keyboard_double_arrow_down</span>
       </div>
     </section>
