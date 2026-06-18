@@ -132,3 +132,27 @@ body {
   z-index: 0;
   opacity: 0.6;
 }
+
+/* TODO: animacion de l boton de ws... probar */
+
+@keyframes bounceSubtle {
+  0%, 100% { transform: translateY(0) scale(1); }
+  10%, 30% { transform: translateY(-6px) scale(1.05); }
+  20% { transform: translateY(4px) scale(0.95); }
+  40% { transform: translateY(0) scale(1); }
+}
+
+@keyframes pingSlow {
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+@utility animate-bounce-subtle {
+  animation: bounceSubtle 4s ease-in-out infinite;
+}
+
+@utility animate-ping-slow {
+  animation: pingSlow 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+}

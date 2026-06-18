@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css"; 
 import { NavBar } from "@/components/NavBar"; 
 import { Footer } from "@/components/Footer";
+import { WhatsAppButton } from "@/components/WhatsAppButton";
 
 export const metadata: Metadata = {
   title: "Santorini Ships Solutions | Premium Maritime Excellence",
@@ -34,6 +35,8 @@ export default function RootLayout({
         </main>
 
         <Footer/>
+
+        <WhatsAppButton/>
 
       </body>
     </html>
