@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
 
 const HERO_VIDEOS = [
@@ -12,14 +13,12 @@ export const HeroSection = () => {
   const [currentIdx, setCurrentIdx] = useState(0);
   const [activePlayer, setActivePlayer] = useState<'A' | 'B'>('A');
   
-  // Optimización de rendimiento activa para pausar videos en segundo plano
   const [isHeroVisible, setIsHeroVisible] = useState(true);
   
   const sectionRef = useRef<HTMLDivElement>(null);
   const videoRefA = useRef<HTMLVideoElement>(null);
   const videoRefB = useRef<HTMLVideoElement>(null);
 
-  // INTERSECTION OBSERVER: Detecta si el Hero sale de la pantalla para liberar CPU/GPU
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -35,7 +34,6 @@ export const HeroSection = () => {
     return () => observer.disconnect();
   }, []);
 
-  // Lógica de reproducción y carga anticipada del siguiente video
   useEffect(() => {
     const activeVideo = activePlayer === 'A' ? videoRefA.current : videoRefB.current;
     const inactiveVideo = activePlayer === 'A' ? videoRefB.current : videoRefA.current;
@@ -57,7 +55,6 @@ export const HeroSection = () => {
     }
   }, [currentIdx, activePlayer, isHeroVisible]);
 
-  // Pre-play del video oculto 1.2 segundos antes de terminar el actual (Evita parpadeo negro)
   useEffect(() => {
     if (!isHeroVisible) return;
 
@@ -127,7 +124,7 @@ export const HeroSection = () => {
             <p className="font-label-md text-label-md uppercase tracking-widest text-secondary mb-4">
               Established Excellence
             </p>
-            <h1 className="font-headline-xl text-headline-xl text-on-surface mb-6 break-words">
+            <h1 className="font-headline-xl text-headline-xl text-on-surface mb-6 wrap-break-word">
               Excellence in Maritime Solutions
             </h1>
             <p className="font-body-lg text-body-lg text-on-surface-variant mb-10 leading-relaxed">
@@ -135,17 +132,17 @@ export const HeroSection = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6">
-              <a 
+              <Link 
                 className="bg-primary-container border border-secondary text-on-surface px-10 py-4 font-label-md text-label-md uppercase tracking-widest hover:bg-secondary hover:text-on-secondary transition-all duration-500 text-center rounded-full"
-                href="#contact"
+                href={'/services'}
               >
-                Secure Services
-              </a>
+                Explore Services
+              </Link>
               <a 
                 className="border border-transparent text-secondary px-6 py-4 font-label-md text-label-md uppercase tracking-widest hover:bg-white/5 transition-all duration-300 text-center rounded-full"
                 href="#services"
               >
-                Explore Portfolio
+                See our Portfolio
               </a>
             </div>
           </div>
