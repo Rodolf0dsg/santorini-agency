@@ -155,16 +155,16 @@ export const ServicesSection = () => {
           {SERVICES_DATA.map((service, index) => (
             <div 
               key={index} 
-              className="flex-none w-[85vw] md:w-[420px] snap-center md:snap-start"
+              className="flex-none w-[85vw] md:w-105 snap-center md:snap-start"
             >
-              <div className="group relative h-[400px] md:h-[500px] rounded-3xl overflow-hidden transition-all duration-700 hover:shadow-2xl border border-white/10">
+              <div className="group relative h-100 md:h-125 rounded-3xl overflow-hidden transition-all duration-700 hover:shadow-2xl border border-white/10">
                 <div className={`absolute inset-0 ${index % 2 === 0 ? "bg-surface-container-high" : "bg-surface-container-highest"}`}>
                   <div
                     className="absolute inset-0 bg-cover bg-center opacity-40 group-hover:scale-110 transition-transform duration-1000"
                     style={{ backgroundImage: `url('${service.bgImage}')` }}
                   ></div>
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent"></div>
+                <div className="absolute inset-0 bg-linear-to-t from-background via-background/40 to-transparent"></div>
                 <div className="absolute inset-0 p-8 flex flex-col justify-between">
                   <span className="material-symbols-outlined text-secondary text-4xl bg-surface/50 p-3 rounded-full w-max backdrop-blur-md">
                     {service.icon}
