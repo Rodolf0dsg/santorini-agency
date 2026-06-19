@@ -46,7 +46,9 @@ const iframeHtmlContent = `
             </p>
             
             <div className="space-y-8">
-              <div className="flex items-center gap-6 group">
+              <a
+                href="wa.me/+584126953355" 
+                className="flex items-center gap-6 group">
                 <div className="p-4 rounded-full border border-white/10 text-secondary bg-surface group-hover:bg-secondary group-hover:text-on-secondary transition-all duration-300">
                   <span className="material-symbols-outlined">call</span>
                 </div>
@@ -54,9 +56,11 @@ const iframeHtmlContent = `
                   <p className="font-label-md text-label-md text-on-surface mb-1">+58 412-6953535</p>
                   <p className="font-body-md text-sm text-on-surface-variant">Main Technical Dispatch</p>
                 </div>
-              </div>
+              </a>
 
-              <div className="flex items-center gap-6 group">
+              <a
+                href="mailto:info@santoriniagency.com" 
+                className="flex items-center gap-6 group">
                 <div className="p-4 rounded-full border border-white/10 text-secondary bg-surface group-hover:bg-secondary group-hover:text-on-secondary transition-all duration-300">
                   <span className="material-symbols-outlined">mail</span>
                 </div>
@@ -64,14 +68,14 @@ const iframeHtmlContent = `
                   <p className="font-label-md text-label-md text-on-surface mb-1 md:break-words">info@santoriniagency.com</p>
                   <p className="font-body-md text-sm text-on-surface-variant">Corporate Inquiries</p>
                 </div>
-              </div>
+              </a>
 
               <div className="flex items-center gap-6 group">
                 <div className="p-4 rounded-full border border-white/10 text-secondary bg-surface group-hover:bg-secondary group-hover:text-on-secondary transition-all duration-300">
                   <span className="material-symbols-outlined">location_on</span>
                 </div>
                 <div>
-                  <p className="font-label-md text-label-md text-on-surface mb-1">Santorini Marine Hub</p>
+                  <p className="font-label-md text-label-md text-on-surface mb-1">Punto Fijo, Venezuela</p>
                   <p className="font-body-md text-sm text-on-surface-variant">Global Headquarters</p>
                 </div>
               </div>
