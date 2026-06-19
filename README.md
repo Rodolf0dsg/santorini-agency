@@ -1,36 +1,40 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Santorini Ships Solutions 
 
-## Getting Started
+Landing page **Santorini Ships Solutions** (Santorini Agency) 
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Sitio en Línea
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Despliegue en produccion en **Vercel** y vinculada a su dominio corporativo oficial.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+[![Ver Sitio Web](https://img.shields.io/badge/Visitar_Sitio_Web-0070F3?style=for-the-badge&logo=vercel&logoColor=white)](https://www.santoriniagency.com/)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## Características Clave
 
-To learn more about Next.js, take a look at the following resources:
+* **Radar Marítimo AIS Ininterrumpido:** Integración nativa y aislada mediante `srcDoc` con VesselFinder, geolocalizada y optimizada por CSS en la bahía de Paraguaná.
+* **Hero Section de Alto Impacto:** Reproducción fluida y en bucle de videos cinematográficos con transiciones de desvanecimiento cruzado (*crossfade*).
+* **Rendimiento Optimizado:** Uso de `IntersectionObserver` de la API de JavaScript para pausar la carga multimedia de fondo cuando el usuario no está en el área visible, liberando CPU/GPU.
+* **Diseño Premium UI/UX:** Interfaz moderna estilo *Glassmorphism* construida sobre una arquitectura responsiva y limpia.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Stack Tecnológico
 
-## Deploy on Vercel
+* **Framework:** [Next.js](https://nextjs.org/) (React)
+* **Estilos:** [Tailwind CSS](https://tailwindcss.com/)
+* **Despliegue e Infraestructura:** [Vercel](https://vercel.com/)
+* **Monitoreo y Tráfico:** VesselFinder AIS API
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Desarrollo Local
+
+Si deseas clonar el repositorio y ejecutar el entorno de desarrollo en tu máquina local, sigue estos pasos:
+
+1. **Clonar el proyecto:**
+   ```bash
+   git clone [https://github.com/TU_USUARIO/santorini-agency.git](https://github.com/TU_USUARIO/santorini-agency.git)
+   cd santorini-agency
