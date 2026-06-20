@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { Menu, X } from "lucide-react";
 
 export const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,7 +15,7 @@ export const NavBar = () => {
   const navLinks = [
     { name: "Home", href: "/" },
     { name: "Services", href: "/services" },
-    { name: "Portfolio", href: "/Portfolio" },
+    { name: "Portfolio", href: "/portfolio" },
     { name: "Contact", href: "/contact" },
   ];
 
@@ -54,10 +55,12 @@ export const NavBar = () => {
             })}
           </div>
 
-          <button className="md:hidden text-on-surface hover:text-secondary transition-colors" onClick={toggleMenu}>
-            <span className="material-symbols-outlined text-2xl">
-              {isOpen ? "close" : "menu"}
-            </span>
+          {/* Botón menú mobile */}
+          <button 
+            className="md:hidden text-on-surface hover:text-secondary transition-colors cursor-pointer flex items-center justify-center" 
+            onClick={toggleMenu}
+          >
+            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
 
         </div>
@@ -76,8 +79,11 @@ export const NavBar = () => {
         }`}
       >
         <div className="p-6 flex justify-end border-b border-white/10">
-          <button className="text-on-surface hover:text-secondary transition-colors" onClick={closeMenu}>
-            <span className="material-symbols-outlined text-3xl">close</span>
+          <button 
+            className="text-on-surface hover:text-secondary transition-colors cursor-pointer flex items-center justify-center" 
+            onClick={closeMenu}
+          >
+            <X className="w-7 h-7" />
           </button>
         </div>
 

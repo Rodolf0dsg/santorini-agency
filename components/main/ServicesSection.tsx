@@ -2,8 +2,35 @@
 
 import { useRef } from "react";
 
+
 interface ServiceItem {
-  icon: string;
+  icon: React.ComponentType<{ className?: string }>;
+  title: string;
+  description: string;
+  bgImage: string;
+}
+
+import { 
+  Anchor, 
+  Users, 
+  ShieldAlert, 
+  Fuel, 
+  Compass, 
+  Layers, 
+  Brush,
+  Container, 
+  Activity, 
+  Link2, 
+  Snowflake, 
+  Beaker,
+  Droplet, 
+  Wrench, 
+  ArrowLeft, 
+  ArrowRight 
+} from "lucide-react";
+
+interface ServiceItem {
+  icon: React.ComponentType<{ className?: string }>;
   title: string;
   description: string;
   bgImage: string;
@@ -11,85 +38,85 @@ interface ServiceItem {
 
 const SERVICES_DATA: ServiceItem[] = [
   {
-    icon: "anchor",
+    icon: Anchor,
     title: "Full Agency",
     description: "End-to-end port attendance, managing customs clearances, berth booking, cargo manifests, and official documentation for streamlined vessel turnaround.",
     bgImage: "https://ik.imagekit.io/santorini/crew-1.jpg?f-webp,q-80",
   },
   {
-    icon: "groups",
+    icon: Users,
     title: "Husbandry",
     description: "Essential vessel and crew support including offshore medical coordination, port passes, secure crew changes, and delivery of ship stores.",
     bgImage: "https://ik.imagekit.io/santorini/boarding.jpg?tr=w-1920,f-webp,q-80",
   },
   {
-    icon: "shield",
+    icon: ShieldAlert,
     title: "Protective Agency",
     description: "Independent supervisory services safeguarding shipowners' or charterers' interests, auditing port expenses, and monitoring local cargo operations.",
     bgImage: "https://ik.imagekit.io/santorini/security.jpg?f-webp,q-80",
   },
   {
-    icon: "local_gas_station",
+    icon: Fuel,
     title: "Bunker Call Agency",
     description: "Specialized port coordination for refueling operations, minimizing idle time, and handling logistics for smooth fuel and oil delivery.",
     bgImage: "https://ik.imagekit.io/santorini/ss-2.jpg?f-webp,q-80",
   },
   {
-    icon: "explore",
+    icon: Compass,
     title: "Canal & Straits Transits",
     description: "Comprehensive transit management, including advance booking, funds clearance, and regulatory compliance for critical maritime passages.",
     bgImage: "https://ik.imagekit.io/santorini/canal-transit.webp",
   },
   {
-    icon: "layers",
+    icon: Layers,
     title: "Tank & hold cleaning",
     description: "Supervision of industrial chemical washing, slop disposal compliance, and strict cargo hold preparations for sensitive product switches.",
     bgImage: "https://ik.imagekit.io/santorini/tank-cleaning.webp",
   },
   {
-    icon: "cleaning_services",
+    icon: Brush,
     title: "Cleaning",
     description: "Industrial hull maintenance support, bio-fouling removal coordination, and specialized deck washdowns to meet international maritime standards.",    
     bgImage: "https://ik.imagekit.io/santorini/barco-laterial-1.jpg?f-webp,q-80",
   },
   {
-    icon: "oil_barrel",
+    icon: Container,
     title: "Fuels",
     description: "Sourcing and coordination of marine fuel oil (MFO), marine gas oil (MGO), and low-sulfur options compliant with IMO environmental regulations.",
     bgImage: "https://ik.imagekit.io/santorini/ss-4.jpg?f-webp,q-80",
   },
   {
-    icon: "propane_tank",
+    icon: Activity,
     title: "Gas & cylinders",
     description: "Procurement, technical safety inspection, and delivery of industrial gases, refrigerants, and certified oxygen/acetylene cylinders for shipboard use.",
     bgImage: "https://ik.imagekit.io/santorini/cylinder-management.png?f-webp,q-80",
   },
   {
-    icon: "lan",
+    icon: Link2,
     title: "Mooring",
     description: "Coordination of certified line-handling crews, tugboat assistance, and supply of high-tensile mooring ropes for secure berthing operations.",
     bgImage: "https://ik.imagekit.io/santorini/barco-1.jpg?f-webp,q-80",
   },
   {
-    icon: "ac_unit",
+    icon: Snowflake,
     title: "Refrigeration",
     description: "Emergency provisions cooling repairs, technical maintenance of cargo reefer systems, and offshore HVAC troubleshooting by certified engineers.",
     bgImage: "https://ik.imagekit.io/santorini/refrigeration.webp",
   },
   {
-    icon: "opacity",
+    icon: Droplet,
     title: "Speciality marine lubricants",
     description: "Supply of high-performance marine engine oils, hydraulic fluids, and grease specifically engineered for heavy machinery and crosshead engines.",
     bgImage: "https://ik.imagekit.io/santorini/team-4.jpg?f-webp,q-80",
   },
   {
-    icon: "water_drop",
+    icon: Beaker,
     title: "Water",
     description: "Logistics for bulk fresh potable water supply, high-volume technical water delivery for boilers, and certified purity testing at port.",
     bgImage: "https://ik.imagekit.io/santorini/workers-3.jpg?f-webp,q-80",
   },
   {
-    icon: "construction",
+    icon: Wrench,
     title: "Welding & repair",
     description: "Arranging class-approved structural hot-work, emergency welding repairs, pipe fitting, and urgent mechanical machining directly at the anchorage or berth.",
     bgImage: "https://ik.imagekit.io/santorini/workers.jpg?f-webp,q-80",
@@ -135,15 +162,15 @@ export const ServicesSection = () => {
           <div className="flex gap-4 self-end">
             <button
               onClick={() => handleScroll("left")}
-              className="p-4 border border-outline-variant hover:bg-primary-container hover:border-primary-container transition-all rounded-full text-on-surface cursor-pointer"
+              className="p-4 border border-outline-variant hover:bg-primary-container hover:border-primary-container transition-all rounded-full text-on-surface cursor-pointer flex items-center justify-center"
             >
-              <span className="material-symbols-outlined">arrow_back</span>
+              <ArrowLeft className="w-6 h-6" />
             </button>
             <button
               onClick={() => handleScroll("right")}
-              className="p-4 border border-outline-variant hover:bg-primary-container hover:border-primary-container transition-all rounded-full text-on-surface cursor-pointer"
+              className="p-4 border border-outline-variant hover:bg-primary-container hover:border-primary-container transition-all rounded-full text-on-surface cursor-pointer flex items-center justify-center"
             >
-              <span className="material-symbols-outlined">arrow_forward</span>
+              <ArrowRight className="w-6 h-6" />
             </button>
           </div>
         </div>
@@ -152,35 +179,38 @@ export const ServicesSection = () => {
           ref={scrollRef}
           className="flex gap-6 overflow-x-auto no-scrollbar pb-8 snap-x scroll-smooth"
         >
-          {SERVICES_DATA.map((service, index) => (
-            <div 
-              key={index} 
-              className="flex-none w-[85vw] md:w-105 snap-center md:snap-start"
-            >
-              <div className="group relative h-100 md:h-125 rounded-3xl overflow-hidden transition-all duration-700 hover:shadow-2xl border border-white/10">
-                <div className={`absolute inset-0 ${index % 2 === 0 ? "bg-surface-container-high" : "bg-surface-container-highest"}`}>
-                  <div
-                    className="absolute inset-0 bg-cover bg-center opacity-40 group-hover:scale-110 transition-transform duration-1000"
-                    style={{ backgroundImage: `url('${service.bgImage}')` }}
-                  ></div>
-                </div>
-                <div className="absolute inset-0 bg-linear-to-t from-background via-background/40 to-transparent"></div>
-                <div className="absolute inset-0 p-8 flex flex-col justify-between">
-                  <span className="material-symbols-outlined text-secondary text-4xl bg-surface/50 p-3 rounded-full w-max backdrop-blur-md">
-                    {service.icon}
-                  </span>
-                  <div>
-                    <h3 className="font-headline-lg text-headline-lg text-on-surface mb-3">
-                      {service.title}
-                    </h3>
-                    <p className="font-body-md text-body-md text-on-surface-variant md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500">
-                      {service.description}
-                    </p>
+          {SERVICES_DATA.map((service, index) => {
+            const IconComponent = service.icon;
+            return (
+              <div 
+                key={index} 
+                className="flex-none w-[85vw] md:w-105 snap-center md:snap-start"
+              >
+                <div className="group relative h-100 md:h-125 rounded-3xl overflow-hidden transition-all duration-700 hover:shadow-2xl border border-white/10">
+                  <div className={`absolute inset-0 ${index % 2 === 0 ? "bg-surface-container-high" : "bg-surface-container-highest"}`}>
+                    <div
+                      className="absolute inset-0 bg-cover bg-center opacity-40 group-hover:scale-110 transition-transform duration-1000"
+                      style={{ backgroundImage: `url('${service.bgImage}')` }}
+                    ></div>
+                  </div>
+                  <div className="absolute inset-0 bg-linear-to-t from-background via-background/40 to-transparent"></div>
+                  <div className="absolute inset-0 p-8 flex flex-col justify-between">
+                    <div className="bg-surface/50 p-3 rounded-full w-max backdrop-blur-md flex items-center justify-center">
+                      <IconComponent className="text-secondary w-9 h-9" />
+                    </div>
+                    <div>
+                      <h3 className="font-headline-lg text-headline-lg text-on-surface mb-3">
+                        {service.title}
+                      </h3>
+                      <p className="font-body-md text-body-md text-on-surface-variant md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500">
+                        {service.description}
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
       </div>

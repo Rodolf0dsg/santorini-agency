@@ -1,11 +1,12 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import { Ship, Eye, BadgeCheck } from "lucide-react";
 
 interface TabItem {
   id: "mission" | "vision" | "values";
   title: string;
-  icon: string;
+  icon: React.ComponentType<{ className?: string }>;
   text: string;
   bgImage: string;
 }
@@ -14,21 +15,21 @@ const PILLARS_DATA: TabItem[] = [
   {
     id: "mission",
     title: "Mission",
-    icon: "sailing",
+    icon: Ship,
     text: "To ensure maximum efficiency for every vessel under our care in Caribbean waters, coordinating seamless port operations with pinpoint precision and absolute loyalty to the shipowner.",
     bgImage: "https://ik.imagekit.io/santorini/crew-1.jpg?f-webp,q-80",
   },
   {
     id: "vision",
     title: "Vision",
-    icon: "visibility",
+    icon: Eye,
     text: "To be the leading technological and logistical benchmark in the global maritime sector, transforming port management through constant innovation and operational excellence.",
     bgImage: "https://ik.imagekit.io/santorini/boarding.jpg?tr=w-1920,f-webp,q-80", 
   },
   {
     id: "values",
     title: "Values",
-    icon: "verified",
+    icon: BadgeCheck,
     text: "Integrity in every nautical mile, unwavering commitment to safety, and an relentless pursuit of technical perfection across all our services.",
     bgImage: "https://ik.imagekit.io/santorini/security.jpg?f-webp,q-80",
   },
@@ -112,6 +113,7 @@ export const MisionVisionSection = () => {
               {PILLARS_DATA.map((tab) => {
                 const isActive = activeTab === tab.id;
                 const isHinted = hintedTab === tab.id;
+                const IconComponent = tab.icon;
                 
                 return (
                   <button
@@ -125,17 +127,15 @@ export const MisionVisionSection = () => {
                         : "border-white/10 hover:border-secondary/50"
                     }`}
                   >
-                    <span
-                      className={`material-symbols-outlined text-2xl transition-transform duration-300 ${
+                    <IconComponent
+                      className={`w-6 h-6 transition-transform duration-300 ${
                         isActive 
                           ? "text-secondary scale-100" 
                           : isHinted 
                           ? "text-secondary scale-110" 
                           : "text-on-surface-variant group-hover:text-secondary group-hover:scale-110"
                       }`}
-                    >
-                      {tab.icon}
-                    </span>
+                    />
                     <span className="font-headline-lg-mobile text-lg font-bold text-on-surface">
                       {tab.title}
                     </span>

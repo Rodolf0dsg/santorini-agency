@@ -1,4 +1,5 @@
 import Image from "next/image"
+import { Quote } from "lucide-react"
 
 export const QuoteSection = () => {
   return (
@@ -14,8 +15,8 @@ export const QuoteSection = () => {
         <div className="absolute inset-0 bg-background/80 backdrop-blur-xs"></div>
       </div>
       <div className="max-w-4xl px-container-padding-mobile text-center reveal active relative z-10">
-        <div className="mb-8">
-          <span className="material-symbols-outlined text-secondary text-6xl">format_quote</span>
+        <div className="mb-8 flex justify-center">
+          <Quote className="text-secondary w-16 h-16 transform rotate-180" />
         </div>
         <h3
           className="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface leading-snug mb-10">

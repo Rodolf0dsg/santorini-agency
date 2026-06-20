@@ -1,5 +1,7 @@
 "use client";
 
+import { ShieldCheck, Factory, Lock, Users } from "lucide-react";
+
 export const InnovationSection = () => {
   
   const sectionBgImage = "https://ik.imagekit.io/santorini/wide-vision-boat.jpg";
@@ -28,8 +30,8 @@ export const InnovationSection = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             
             <div className="glass-card p-8 rounded-3xl group hover:border-secondary/50 transition-colors duration-500 bg-surface/30 backdrop-blur-md border border-white/5">
-              <span className="material-symbols-outlined text-secondary text-4xl mb-6 bg-secondary/10 p-4 rounded-full w-max block">
-                verified_user
+              <span className="text-secondary mb-6 bg-secondary/10 p-4 rounded-full w-max block">
+                <ShieldCheck className="w-9 h-9" />
               </span>
               <h4 className="font-headline-lg-mobile text-lg font-bold mb-2">Safe Working</h4>
               <p className="font-body-md text-body-md text-on-surface-variant">
@@ -38,8 +40,8 @@ export const InnovationSection = () => {
             </div>
 
             <div className="glass-card p-8 rounded-3xl group hover:border-secondary/50 transition-colors duration-500 bg-surface/30 backdrop-blur-md border border-white/5">
-              <span className="material-symbols-outlined text-secondary text-4xl mb-6 bg-secondary/10 p-4 rounded-full w-max block">
-                factory
+              <span className="text-secondary mb-6 bg-secondary/10 p-4 rounded-full w-max block">
+                <Factory className="w-9 h-9" />
               </span>
               <h4 className="font-headline-lg-mobile text-lg font-bold mb-2">Responsible</h4>
               <p className="font-body-md text-body-md text-on-surface-variant">
@@ -48,8 +50,8 @@ export const InnovationSection = () => {
             </div>
 
             <div className="glass-card p-8 rounded-3xl group hover:border-secondary/50 transition-colors duration-500 bg-surface/30 backdrop-blur-md border border-white/5">
-              <span className="material-symbols-outlined text-secondary text-4xl mb-6 bg-secondary/10 p-4 rounded-full w-max block">
-                shield_lock
+              <span className="text-secondary mb-6 bg-secondary/10 p-4 rounded-full w-max block">
+                <Lock className="w-9 h-9" />
               </span>
               <h4 className="font-headline-lg-mobile text-lg font-bold mb-2">Reliability</h4>
               <p className="font-body-md text-body-md text-on-surface-variant">
@@ -58,8 +60,8 @@ export const InnovationSection = () => {
             </div>
 
             <div className="glass-card p-8 rounded-3xl group hover:border-secondary/50 transition-colors duration-500 bg-surface/30 backdrop-blur-md border border-white/5">
-              <span className="material-symbols-outlined text-secondary text-4xl mb-6 bg-secondary/10 p-4 rounded-full w-max block">
-                diversity_3
+              <span className="text-secondary mb-6 bg-secondary/10 p-4 rounded-full w-max block">
+                <Users className="w-9 h-9" />
               </span>
               <h4 className="font-headline-lg-mobile text-lg font-bold mb-2">Human Talent</h4>
               <p className="font-body-md text-body-md text-on-surface-variant">

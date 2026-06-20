@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
+import { ChevronsDown } from "lucide-react";
 
 const HERO_VIDEOS = [
   "/videos/hero-section/bigOne.mp4",
@@ -84,8 +85,8 @@ export const HeroSection = () => {
   return (
     <section 
       ref={sectionRef}
-      style={{ clipPath: "contents" }} 
-      className="relative h-screen w-full flex items-center justify-center bg-surface-container-lowest z-0 overflow-hidden"
+      style={{ clipPath: "contents" }}       
+      className="relative min-h-screen md:h-screen w-full flex items-center justify-center bg-surface-container-lowest z-0 overflow-hidden"
     >
       
       <div className={`fixed inset-0 w-full h-full z-0 overflow-hidden pointer-events-none ${!isHeroVisible ? "hidden" : "block"}`}>
@@ -124,7 +125,7 @@ export const HeroSection = () => {
 
       <div className="absolute inset-0 bg-linear-to-b from-surface-container-lowest/40 via-surface-container-lowest/60 to-surface-container-lowest z-20"></div>
 
-      <div className="relative z-30 w-full max-w-7xl px-container-padding-mobile md:px-container-padding-desktop mt-24">
+      <div className="relative z-30 w-full max-w-7xl px-container-padding-mobile md:px-container-padding-desktop pt-28 pb-20 md:py-0">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center w-full">
           
           <div className="glass-card w-full p-8 md:p-12 rounded-xl">
@@ -165,8 +166,8 @@ export const HeroSection = () => {
         </div>
       </div>
 
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce text-secondary z-30">
-        <span className="material-symbols-outlined text-4xl">keyboard_double_arrow_down</span>
+      <div className="hidden md:block absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce text-secondary z-30">
+        <ChevronsDown className="w-10 h-10 stroke-[1.5]" />
       </div>
     </section>
   );

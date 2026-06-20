@@ -1,11 +1,12 @@
 "use client";
 
 import { useState } from "react";
+import { Phone, Mail, MapPin } from "lucide-react";
 
 export const ContactSection = () => {
   const [mapLoaded, setMapLoaded] = useState(false);
 
-const iframeHtmlContent = `
+  const iframeHtmlContent = `
     <!DOCTYPE html>
     <html>
       <head>
@@ -17,7 +18,7 @@ const iframeHtmlContent = `
       <body>
         <script type="text/javascript">
           var width = "100%";
-          var height = "100%"; // El CSS de arriba reforzará que esto se cumpla
+          var height = "100%";
           var latitude = "11.78";   
           var longitude = "-70.20";
           var zoom = "9";           
@@ -49,8 +50,8 @@ const iframeHtmlContent = `
               <a
                 href="wa.me/+584126953355" 
                 className="flex items-center gap-6 group">
-                <div className="p-4 rounded-full border border-white/10 text-secondary bg-surface group-hover:bg-secondary group-hover:text-on-secondary transition-all duration-300">
-                  <span className="material-symbols-outlined">call</span>
+                <div className="p-4 rounded-full border border-white/10 text-secondary bg-surface group-hover:bg-secondary group-hover:text-on-secondary transition-all duration-300 flex items-center justify-center">
+                  <Phone className="w-6 h-6" />
                 </div>
                 <div>
                   <p className="font-label-md text-label-md text-on-surface mb-1">+58 412-6953535</p>
@@ -61,8 +62,8 @@ const iframeHtmlContent = `
               <a
                 href="mailto:info@santoriniagency.com" 
                 className="flex items-center gap-6 group">
-                <div className="p-4 rounded-full border border-white/10 text-secondary bg-surface group-hover:bg-secondary group-hover:text-on-secondary transition-all duration-300">
-                  <span className="material-symbols-outlined">mail</span>
+                <div className="p-4 rounded-full border border-white/10 text-secondary bg-surface group-hover:bg-secondary group-hover:text-on-secondary transition-all duration-300 flex items-center justify-center">
+                  <Mail className="w-6 h-6" />
                 </div>
                 <div>
                   <p className="font-label-md text-label-md text-on-surface mb-1 md:break-words">info@santoriniagency.com</p>
@@ -71,8 +72,8 @@ const iframeHtmlContent = `
               </a>
 
               <div className="flex items-center gap-6 group">
-                <div className="p-4 rounded-full border border-white/10 text-secondary bg-surface group-hover:bg-secondary group-hover:text-on-secondary transition-all duration-300">
-                  <span className="material-symbols-outlined">location_on</span>
+                <div className="p-4 rounded-full border border-white/10 text-secondary bg-surface group-hover:bg-secondary group-hover:text-on-secondary transition-all duration-300 flex items-center justify-center">
+                  <MapPin className="w-6 h-6" />
                 </div>
                 <div>
                   <p className="font-label-md text-label-md text-on-surface mb-1">Punto Fijo, Venezuela</p>
