@@ -66,6 +66,7 @@ export const Footer = () => {
               <li>
                 <a 
                   href="mailto:info@santoriniagency.com" 
+                  target="_blank"
                   className="flex items-center gap-3 text-on-surface-variant hover:text-white transition-colors group"
                 >
                   <Mail className="w-4 h-4 text-secondary/70 group-hover:text-secondary transition-colors" />
