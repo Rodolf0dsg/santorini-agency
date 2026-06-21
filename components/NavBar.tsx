@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
+import Image from "next/image";
 
 export const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,7 +16,6 @@ export const NavBar = () => {
   const navLinks = [
     { name: "Home", href: "/" },
     { name: "Services", href: "/services" },
-    { name: "Portfolio", href: "/portfolio" },
     { name: "Contact", href: "/contact" },
   ];
 
@@ -24,8 +24,13 @@ export const NavBar = () => {
       <nav className="fixed top-4 left-1/2 -translate-x-1/2 w-[calc(100%-2rem)] max-w-7xl backdrop-blur-md bg-surface/70 z-50 border border-white/10 shadow-lg rounded-full">
         <div className="flex justify-between items-center px-6 md:px-10 py-3 w-full">
 
-          <div className="flex items-center gap-4">
-            <img
+          <Link 
+            href={'/'}
+            className="flex items-center gap-4"
+          >
+            <Image
+              height={100}
+              width={100}
               alt="Santorini Ships Solutions"
               className="h-9 w-auto"
               src="/logo-santorini-white.png"
@@ -33,7 +38,7 @@ export const NavBar = () => {
             <span className="hidden md:block font-headline-lg text-lg font-bold text-on-surface">
               Santorini Ships
             </span>
-          </div>
+          </Link>
 
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => {              
@@ -55,7 +60,7 @@ export const NavBar = () => {
             })}
           </div>
 
-          {/* Botón menú mobile */}
+          {/* Botón menú mobile TODO: Agregar boton de llamada abajo */}
           <button 
             className="md:hidden text-on-surface hover:text-secondary transition-colors cursor-pointer flex items-center justify-center" 
             onClick={toggleMenu}
