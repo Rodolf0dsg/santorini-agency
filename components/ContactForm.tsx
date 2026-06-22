@@ -84,7 +84,7 @@ export const ContactForm = () => {
           />
         </div>
         <div className="flex flex-col gap-2">
-          <label className="text-[11px] font-label-md tracking-wider uppercase text-on-surface-variant">Corporate Email</label>
+          <label className="text-[11px] font-label-md tracking-wider uppercase text-on-surface-variant">Email</label>
           <input
             type="email"
             required
