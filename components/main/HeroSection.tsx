@@ -128,7 +128,7 @@ export const HeroSection = () => {
       <div className="relative z-30 w-full max-w-7xl px-container-padding-mobile md:px-container-padding-desktop pt-28 pb-20 md:py-0">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center w-full">
           
-          <div className="glass-card w-full p-8 md:p-12 rounded-xl">
+          <div className="glass-card w-full p-6 md:p-12 rounded-lg">
             <p className="font-label-md text-label-md uppercase tracking-widest text-secondary mb-4">
               Established Excellence
             </p>
