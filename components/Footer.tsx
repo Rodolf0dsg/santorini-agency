@@ -54,7 +54,7 @@ export const Footer = () => {
             <ul className="space-y-4 font-body-md text-sm">
               <li>
                 <a 
-                  href="https://wa.me/+584126953355" 
+                  href="https://wa.me/+584126953535" 
                   target="_blank" 
                   rel="noreferrer" 
                   className="flex items-center gap-3 text-on-surface-variant hover:text-white transition-colors group"

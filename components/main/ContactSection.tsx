@@ -53,13 +53,13 @@ export const ContactSection = () => {
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 border-t border-white/5 pt-6">
-              <a href="https://wa.me/+584126953355" target="_blank" rel="noreferrer" className="flex items-center gap-3 group">
+              <a href="https://wa.me/+584126953535" target="_blank" rel="noreferrer" className="flex items-center gap-3 group">
                 <div className="p-2.5 rounded-xl border border-white/10 text-secondary bg-surface-container-low group-hover:bg-secondary group-hover:text-on-secondary transition-all duration-300">
                   <Phone className="w-4 h-4" />
                 </div>
                 <div className="overflow-hidden">
                   <p className="text-[11px] uppercase tracking-wider text-on-surface-variant">Hotline 24/7</p>
-                  <p className="text-xs text-on-surface font-semibold truncate">+58 412-6953355</p>
+                  <p className="text-xs text-on-surface font-semibold truncate">+58 412-6953535</p>
                 </div>
               </a>
 

@@ -32,8 +32,8 @@ export default function ContactPage() {
             <div>
               <h3 className="text-white font-semibold text-lg mb-2">Phone Support</h3>
               <div className="flex flex-col gap-1 text-white/60 text-sm font-medium">
-                <Link href="https://wa.me/+584126953355" target="_blank" className="hover:text-secondary transition-colors">
-                  +58 (412) 6953355
+                <Link href="https://wa.me/+584126953535" target="_blank" className="hover:text-secondary transition-colors">
+                  +58 (412) 6953535
                 </Link>
               </div>
             </div>
