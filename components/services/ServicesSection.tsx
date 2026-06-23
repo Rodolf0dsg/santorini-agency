@@ -217,7 +217,7 @@ export const ServicesSection = () => {
               <div className="h-1 w-12 bg-secondary"></div>
             </div>
             
-            <div className="flex md:flex-col overflow-x-auto md:overflow-visible hide-scrollbar gap-2 md:gap-4 mb-10 md:mb-0">
+            <div className="flex flex-col items-center md:items-start gap-3 md:gap-4 mb-14 md:mb-0 w-full">
               {SERVICES_DATA.map((tab) => {
                 const isActive = activeTab === tab.id;
                 const isHinted = hintedTab === tab.id;
@@ -227,7 +227,7 @@ export const ServicesSection = () => {
                   <button
                     key={tab.id}
                     onClick={() => handleTabChange(tab.id)}
-                    className={`flex-shrink-0 flex items-center gap-4 p-4 rounded-xl transition-all duration-300 w-auto md:w-full text-left border cursor-pointer ${
+                    className={`flex items-center gap-4 p-4 rounded-xl transition-all duration-300 w-full max-w-sm md:max-w-none text-left border cursor-pointer ${
                       isActive
                         ? "bg-surface-container-high border-white/5 shadow-[0_0_20px_rgba(243,190,88,0.15)] text-on-surface"
                         : isHinted
@@ -236,7 +236,7 @@ export const ServicesSection = () => {
                     }`}
                   >
                     <TabIcon 
-                      className={`w-6 h-6 transition-transform duration-300 ${
+                      className={`w-5 h-5 shrink-0 transition-transform duration-300 ${
                         isActive || isHinted ? "text-secondary scale-110" : "text-secondary"
                       }`}
                     />
@@ -264,9 +264,9 @@ export const ServicesSection = () => {
                     : "opacity-0 translate-y-8 z-0 pointer-events-none absolute inset-0"
                 }`}
               >
-                <div className="mb-10">
+                <div className="mb-10 text-center md:text-left">
                   <h2 className="font-headline-lg text-headline-lg mb-4">{tab.mainTitle}</h2>
-                  <p className="text-on-surface-variant font-body-md max-w-2xl">{tab.mainDescription}</p>
+                  <p className="text-on-surface-variant font-body-md max-w-2xl mx-auto md:mx-0">{tab.mainDescription}</p>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
