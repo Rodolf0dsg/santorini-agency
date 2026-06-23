@@ -6,7 +6,7 @@ import { InnovationSection } from "@/components/main/InnovationSection";
 import { MisionVisionSection } from "@/components/main/MisionVisionSection";
 import { QuoteSection } from "@/components/main/QuoteSection";
 import { ServicesSection } from "@/components/main/ServicesSection";
-import { AsymmetricCarousel } from "@/components/AymmetricalCarousel";
+import { AsymmetricCarousel } from '../components/main/AymmetricalCarousel';
 
 
 export default function MainPage() {
